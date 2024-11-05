@@ -45,25 +45,28 @@ Steps to set up the application locally:
    ```sh
    git clone https://github.com/KiranYarashi/L7_Assesment_Kiran_Yarashi.git
    ```
-
-2. Set up the virtual environment:
+2. Change Directory:
+   ```sh
+   cd L7_Assesment_Kiran_Yarashi
+   ```
+3. Set up the virtual environment:
    ```sh
    python -m venv venv
    venv\Scripts\activate  # For Windows
    ```
 
-3. Install the required packages:
+4. Install the required packages:
    ```sh
    pip install -r requirements.txt
    ```
 
-4. Run the application:
+5. Run the application:
    ```sh
    cd app
    streamlit run streamlit_app.py
    ```
 
-5. Open the browser and navigate to:
+6. Open the browser and navigate to:
    ```sh
    http://localhost:8502
    ```
