@@ -87,11 +87,14 @@ Steps to set up the application locally:
 ### Customer Suggestions
 
 - **Submit a new suggestion** and verify it appears in the suggestions list.
+
+- 
 ---
 
 
 ## SQL Queries and ORM Abstraction
 The application uses raw SQL queries for database operations. Here are some examples:
+
 
 - **Add Flavour**:
   ```sql
@@ -107,6 +110,22 @@ The application uses raw SQL queries for database operations. Here are some exam
   ```sql
   DELETE FROM flavours WHERE id = ?
   ```
+
+- **Add Ingredient**:
+  ```sql
+  INSERT INTO ingredients(name, quantity, unit, allergen_info) VALUES(?, ?, ?, ?)
+  ```
+
+- **Get All Ingredients**:
+  ```sql
+  SELECT * FROM ingredients
+  ```
+
+- **Delete Ingredient**:
+  ```sql
+  DELETE FROM ingredients WHERE id = ?
+  ```
+  For more details, refer to the methods in the [`FictionalChocoHouse`](app/main.py) class.
   
 ---
 
