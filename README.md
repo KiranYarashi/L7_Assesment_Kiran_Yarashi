@@ -11,6 +11,7 @@ A  management system for tracking and handling chocolate ingredients, flavors, a
 ###  *Date*: 2024-11-03
 
 ---
+---
 # Features
 
 
@@ -25,7 +26,7 @@ A  management system for tracking and handling chocolate ingredients, flavors, a
 
 
 ---
-
+---
 ##  Tech Stack
 
 - *Python* - Backend development
@@ -35,7 +36,7 @@ A  management system for tracking and handling chocolate ingredients, flavors, a
 
 
 ---
-
+---
 ## 🛠 Installation
 
 Steps to set up the application locally:
@@ -67,7 +68,7 @@ Steps to set up the application locally:
    http://localhost:8502
    ```
 ---
-
+---
 
 ## 🐳Docker Build and Run
 To build and run the application using Docker, follow these steps:
@@ -89,7 +90,7 @@ Go to the Directory where Dockerfile is present then
    ```
 
 ---
-
+---
 ## Test Steps
 
 ### Ingredients Management
@@ -108,7 +109,7 @@ Go to the Directory where Dockerfile is present then
 - **Submit a new suggestion** and verify it appears in the suggestions list.
 
 ---
-
+---
 
 ## SQL Queries and ORM Abstraction
 The application uses raw SQL queries for database operations. Here are some examples:
@@ -153,7 +154,7 @@ The application uses raw SQL queries for database operations. Here are some exam
 
 
 ---
-
+---
 
 ## Additional Information
 For more details on the implementation, refer to the code documentation within the source files, especially in the [`app`](app) directory.
