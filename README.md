@@ -10,10 +10,9 @@ A  management system for tracking and handling chocolate ingredients, flavors, a
 ###  *Assessment*: L7 Informatics  
 ###  *Date*: 2024-11-03
 
-
+---
 # Features
 
-## Features
 
 - **Ingredients Management**  
   - Add, manage, update, and delete ingredients with ease
