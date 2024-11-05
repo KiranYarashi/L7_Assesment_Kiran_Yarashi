@@ -143,39 +143,14 @@ The application uses raw SQL queries for database operations. Here are some exam
   ```sql
   DELETE FROM ingredients WHERE id = ?
   ```
+
+  For more details, refer to the methods in the [`FictionalChocoHouse`](app/main.py) class.
 ---
 
 ## file structure of my project
-L7_Assesment_Kiran_Yarashi/
-├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── streamlit_app.py
-│   ├── templates/
-│   │   ├── base.html
-│   │   └── index.html
-│   ├── static/
-│   │   ├── css/
-│   │   │   └── style.css
-│   │   └── js/
-│   │       └── script.js
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── flavour.py
-│   │   ├── ingredient.py
-│   │   └── suggestion.py
-│   ├── services/
-│       ├── __init__.py
-│       ├── flavour_service.py
-│       ├── ingredient_service.py
-│       └── suggestion_service.py          
-├── requirements.txt
-├── Dockerfile
-├── README.md
-└── .gitignore
+(image.png)
 
----
-  For more details, refer to the methods in the [`FictionalChocoHouse`](app/main.py) class.
+
   
 ---
 
