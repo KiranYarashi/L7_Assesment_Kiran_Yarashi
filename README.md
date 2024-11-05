@@ -1,6 +1,8 @@
 # Chocolate Management System (DEPLOYED USING STREAMLIT)
 
 ## 🚀 [**Access the Deployed Application Here!**](https://l7-kiran-yarashi.streamlit.app/)
+[https://l7-kiran-yarashi.streamlit.app/](https://l7-kiran-yarashi.streamlit.app/)
+
 
 A  management system for tracking and handling chocolate ingredients, flavors, and customer suggestions!
 
