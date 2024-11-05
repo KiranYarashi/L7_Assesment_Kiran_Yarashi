@@ -88,7 +88,6 @@ Steps to set up the application locally:
 
 - **Submit a new suggestion** and verify it appears in the suggestions list.
 
-- 
 ---
 
 
