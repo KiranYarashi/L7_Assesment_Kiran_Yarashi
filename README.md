@@ -36,7 +36,7 @@ A  management system for tracking and handling chocolate ingredients, flavors, a
 
 ---
 
-##  Installation
+## 🛠 Installation
 
 Steps to set up the application locally:
 
@@ -69,7 +69,7 @@ Steps to set up the application locally:
 ---
 
 
-## Docker-based Build and Run
+## 🐳Docker-based Build and Run
 To build and run the application using Docker, follow these steps:
 Go to the Directory where Dockerfile is present then
 
