@@ -147,7 +147,8 @@ The application uses raw SQL queries for database operations. Here are some exam
   For more details, refer to the methods in the [`FictionalChocoHouse`](app/main.py) class.
 ---
 
-![Project File Structure](image.png)
+![Project File Structure]
+(image.png)
 
 
 
