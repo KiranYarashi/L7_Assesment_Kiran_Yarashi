@@ -12,33 +12,30 @@ A  management system for tracking and handling chocolate ingredients, flavors, a
 
 # Features
 
-- *Ingredients Management*  
-  - Add Ingredients  
-  - Manage Ingredients  
-  - Update Ingredient Quantity  
-  - Delete Ingredients 
+## Features
 
-- *Flavor Management*  
-  - Add Flavors  
-  - View Flavors  
-  - Delete Flavors  
+- **Ingredients Management**  
+  - Add, manage, update, and delete ingredients with ease
 
-- *Customer Suggestions*  
-  - Collect and view customer suggestions
+- **Flavor Management**  
+  - Add, view, and delete flavors
+
+- **Customer Suggestions**  
+  - Collect and view customer feedback on flavors and ingredients
+
 
 ---
 
 ##  Tech Stack
 
 - *Python* - Backend development
-- *Streamlit* - Web application framework
 - *SQLite* - Database for data storage and management
+- *Streamlit* - Web application framework
 - *Docker* - Containerization for easy deployment
 
 
-
-
 ---
+
 ##  Installation
 
 Steps to set up the application locally:
@@ -69,7 +66,30 @@ Steps to set up the application locally:
    ```sh
    http://localhost:8502
    ```
+
+   
 ---
+
+
+## Test Steps
+
+### Ingredients Management
+
+- **Add a new ingredient** and verify it appears in the list.
+- **Update the quantity of an ingredient** and ensure the changes are saved.
+- **Delete an ingredient** and confirm it no longer appears in the list.
+
+### Flavor Management
+
+- **Add a new flavor**, then view it in the flavors list.
+- **Delete a flavor** and confirm it is removed from the list.
+
+### Customer Suggestions
+
+- **Submit a new suggestion** and verify it appears in the suggestions list.
+---
+
+
 ## SQL Queries and ORM Abstraction
 The application uses raw SQL queries for database operations. Here are some examples:
 
@@ -89,6 +109,8 @@ The application uses raw SQL queries for database operations. Here are some exam
   ```
   
 ---
+
+
 ## Docker-based Build and Run
 To build and run the application using Docker, follow these steps:
 Go to the Directory where Dockerfile is present then
