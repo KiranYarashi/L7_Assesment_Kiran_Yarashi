@@ -146,7 +146,7 @@ The application uses raw SQL queries for database operations. Here are some exam
 
   For more details, refer to the methods in the [`FictionalChocoHouse`](app/main.py) class.
 ---
-
+##Project File Structure
 ![Project File Structure](https://github.com/KiranYarashi/L7_Assesment_Kiran_Yarashi/blob/main/image.png)
 
 
