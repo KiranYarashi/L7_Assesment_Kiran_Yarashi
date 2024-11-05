@@ -66,10 +66,29 @@ Steps to set up the application locally:
    ```sh
    http://localhost:8502
    ```
-
-   
 ---
 
+
+## Docker-based Build and Run
+To build and run the application using Docker, follow these steps:
+Go to the Directory where Dockerfile is present then
+
+1. Build the Docker image:
+   ```sh
+   docker build -t chocolate-management-system .
+   ```
+
+2. Run the Docker container:
+   ```sh
+   docker run -p 8501:8501 chocolate-management-system
+   ```
+
+3. Open the browser and navigate to:
+   ```sh
+   http://localhost:8501
+   ```
+
+---
 
 ## Test Steps
 
@@ -128,27 +147,6 @@ The application uses raw SQL queries for database operations. Here are some exam
   
 ---
 
-
-## Docker-based Build and Run
-To build and run the application using Docker, follow these steps:
-Go to the Directory where Dockerfile is present then
-
-1. Build the Docker image:
-   ```sh
-   docker build -t chocolate-management-system .
-   ```
-
-2. Run the Docker container:
-   ```sh
-   docker run -p 8501:8501 chocolate-management-system
-   ```
-
-3. Open the browser and navigate to:
-   ```sh
-   http://localhost:8501
-   ```
-
----
 
 ## Additional Information
 For more details on the implementation, refer to the code documentation within the source files, especially in the [`app`](app) directory.
