@@ -38,7 +38,7 @@ Steps to set up the application locally:
 
 1. Clone the repository:
    ```sh
-   git clone 
+   git clone https://github.com/KiranYarashi/L7_Assesment_Kiran_Yarashi.git
    ```
 
 2. Set up the virtual environment:
