@@ -70,17 +70,6 @@ Steps to set up the application locally:
    http://localhost:8502
    ```
 ---
-
-## Running Tests
-To validate the application, you can run the unit tests provided:
-
-1. Ensure the virtual environment is activated.
-2. Run the tests using `unittest`:
-   ```sh
-   python -m unittest discover -s tests
-   ```
-
----
 ## SQL Queries and ORM Abstraction
 The application uses raw SQL queries for database operations. Here are some examples:
 
