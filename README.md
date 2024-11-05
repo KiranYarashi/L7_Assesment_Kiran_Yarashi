@@ -152,11 +152,11 @@ The application uses raw SQL queries for database operations. Here are some exam
 ---
 ---
 ## Edge Case Handling
-Duplicate Entries:
+- Duplicate Entries:
 
-The application prevents duplicate entries for flavor_name in the seasonal_flavors table and ingredient_name in the ingredient_inventory table. Attempts to add duplicates will raise an error, which is handled gracefully by the code. Inventory Update:
+- The application prevents duplicate entries for flavor_name in the seasonal_flavors table and ingredient_name in the ingredient_inventory table. Attempts to add duplicates will raise an error, which is handled gracefully by the code. Inventory Update:
 
-The update_ingredient_inventory function can handle both new and existing ingredient entries, updating quantities as necessary.
+- The update_ingredient_inventory function can handle both new and existing ingredient entries, updating quantities as necessary.
 
 ---
 ---
