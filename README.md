@@ -69,7 +69,7 @@ Steps to set up the application locally:
 ---
 
 
-## 🐳Docker-based Build and Run
+## 🐳Docker Build and Run
 To build and run the application using Docker, follow these steps:
 Go to the Directory where Dockerfile is present then
 
