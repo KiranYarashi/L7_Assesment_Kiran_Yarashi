@@ -151,6 +151,15 @@ The application uses raw SQL queries for database operations. Here are some exam
   For more details, refer to the methods in the [`FictionalChocoHouse`](app/main.py) class.
 ---
 ---
+## Edge Case Handling
+Duplicate Entries:
+
+The application prevents duplicate entries for flavor_name in the seasonal_flavors table and ingredient_name in the ingredient_inventory table. Attempts to add duplicates will raise an error, which is handled gracefully by the code. Inventory Update:
+
+The update_ingredient_inventory function can handle both new and existing ingredient entries, updating quantities as necessary.
+
+---
+---
 ## Project File Structure
 
 ![Project File Structure](https://github.com/KiranYarashi/L7_Assesment_Kiran_Yarashi/blob/main/image.png)
