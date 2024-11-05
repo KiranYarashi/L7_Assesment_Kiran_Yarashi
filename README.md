@@ -6,8 +6,9 @@
 
 A  management system for tracking and handling chocolate ingredients, flavors, and customer suggestions!
 
-### 📋 *Developer*: [Kiran Yarashi]  
-### 📅 *Date*: 2024-11-03
+###  *Developer*: [Kiran Yarashi]  
+###  *Assessment*: L7 Informatics  
+###  *Date*: 2024-11-03
 
 
 # Features
