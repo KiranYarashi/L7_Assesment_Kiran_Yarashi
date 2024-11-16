@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate House Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Chocolate House Management</h1>
+        
+        <!-- Sidebar menu -->
+        <div class="mt-3">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="view-flavors-tab" data-toggle="tab" href="#view-flavors" role="tab" aria-controls="view-flavors" aria-selected="true">View Flavors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="add-flavor-tab" data-toggle="tab" href="#add-flavor" role="tab" aria-controls="add-flavor" aria-selected="false">Add Flavor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="delete-flavor-tab" data-toggle="tab" href="#delete-flavor" role="tab" aria-controls="delete-flavor" aria-selected="false">Delete Flavor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="manage-ingredients-tab" data-toggle="tab" href="#manage-ingredients" role="tab" aria-controls="manage-ingredients" aria-selected="false">Manage Ingredients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="customer-suggestions-tab" data-toggle="tab" href="#customer-suggestions" role="tab" aria-controls="customer-suggestions" aria-selected="false">Customer Suggestions</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <!-- View Flavors -->
+                <div class="tab-pane fade show active" id="view-flavors" role="tabpanel" aria-labelledby="view-flavors-tab">
+                    <h3 class="mt-3">Viewing Flavors</h3>
+                    {% for flavour in flavours %}
+                        <p>ID: {{ flavour[0] }}, Name: {{ flavour[1] }}, Description: {{ flavour[2] }}, Seasonal: {{ flavour[3] }}, Season: {{ flavour[4] }}</p>
+                    {% endfor %}
+                </div>
+                
+                <!-- Add Flavor -->
+                <div class="tab-pane fade" id="add-flavor" role="tabpanel" aria-labelledby="add-flavor-tab">
+                    <h3 class="mt-3">Add New Flavor</h3>
+                    <form action="{{ url_for('add_flavour') }}" method="POST">
+                        <div class="form-group">
+                            <label for="name">Flavor Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Flavor Description</label>
+                            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="is_seasonal" name="is_seasonal">
+                            <label class="form-check-label" for="is_seasonal">Is Seasonal?</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="season">Season (if applicable)</label>
+                            <input type="text" class="form-control" id="season" name="season">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Flavor</button>
+                    </form>
+                </div>
+                
+                <!-- Delete Flavor -->
+                <div class="tab-pane fade" id="delete-flavor" role="tabpanel" aria-labelledby="delete-flavor-tab">
+                    <h3 class="mt-3">Delete Flavor</h3>
+                    <form action="{{ url_for('delete_flavour') }}" method="POST">
+                        <div class="form-group">
+                            <label for="flavour_id">Enter the ID of the flavour to delete:</label>
+                            <input type="number" class="form-control" id="flavour_id" name="flavour_id" min="1" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Delete Flavor</button>
+                    </form>
+                </div>
+                
+                <!-- Manage Ingredients -->
+                <div class="tab-pane fade" id="manage-ingredients" role="tabpanel" aria-labelledby="manage-ingredients-tab">
+                    <h3 class="mt-3">Manage Ingredients</h3>
+                    <ul class="nav nav-tabs" id="ingredientTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="view-ingredients-tab" data-toggle="tab" href="#view-ingredients" role="tab" aria-controls="view-ingredients" aria-selected="true">View Ingredients</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="add-ingredient-tab" data-toggle="tab" href="#add-ingredient" role="tab" aria-controls="add-ingredient" aria-selected="false">Add Ingredient</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="delete-ingredient-tab" data-toggle="tab" href="#delete-ingredient" role="tab" aria-controls="delete-ingredient" aria-selected="false">Delete Ingredient</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="update-ingredient-tab" data-toggle="tab" href="#update-ingredient" role="tab" aria-controls="update-ingredient" aria-selected="false">Update Ingredient Quantity</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="ingredientTabContent">
+                        <!-- View Ingredients -->
+                        <div class="tab-pane fade show active" id="view-ingredients" role="tabpanel" aria-labelledby="view-ingredients-tab">
+                            <h4 class="mt-3">Viewing Ingredients</h4>
+                            {% for ingredient in ingredients %}
+                                <p>ID: {{ ingredient[0] }}, Name: {{ ingredient[1] }}, Quantity: {{ ingredient[2] }}, Unit: {{ ingredient[3] }}, Allergen Info: {{ ingredient[4] }}</p>
+                            {% endfor %}
+                        </div>
+                        
+                        <!-- Add Ingredient -->
+                        <div class="tab-pane fade" id="add-ingredient" role="tabpanel" aria-labelledby="add-ingredient-tab">
+                            <h4 class="mt-3">Add New Ingredient</h4>
+                            <form action="{{ url_for('add_ingredient') }}" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Ingredient Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="quantity">Quantity</label>
+                                    <input type="number" class="form-control" id="quantity" name="quantity" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="unit">Unit</label>
+                                    <input type="text" class="form-control" id="unit" name="unit" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="allergen_info">Allergen Information (optional)</label>
+                                    <input type="text" class="form-control" id="allergen_info" name="allergen_info">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Ingredient</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Delete Ingredient -->
+                        <div class="tab-pane fade" id="delete-ingredient" role="tabpanel" aria-labelledby="delete-ingredient-tab">
+                            <h4 class="mt-3">Delete Ingredient</h4>
+                            <form action="{{ url_for('delete_ingredient') }}" method="POST">
+                                <div class="form-group">
+                                    <label for="ingredient_id">Enter the ID of the ingredient to delete:</label>
+                                    <input type="number" class="form-control" id="ingredient_id" name="ingredient_id" min="1" required>
+                                </div>
+                                <button type="submit" class="btn btn-danger">Delete Ingredient</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Update Ingredient Quantity -->
+                        <div class="tab-pane fade" id="update-ingredient" role="tabpanel" aria-labelledby="update-ingredient-tab">
+                            <h4 class="mt-3">Update Ingredient Quantity</h4>
+                            <form action="{{ url_for('update_ingredient_quantity') }}" method="POST">
+                                <div class="form-group">
+                                    <label for="ingredient_id">Enter the ID of the ingredient to update:</label>
+                                    <input type="number" class="form-control" id="ingredient_id" name="ingredient_id" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new_quantity">New Quantity</label>
+                                    <input type="number" class="form-control" id="new_quantity" name="new_quantity" min="0" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Quantity</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Customer Suggestions -->
+                <div class="tab-pane fade" id="customer-suggestions" role="tabpanel" aria-labelledby="customer-suggestions-tab">
+                    <h3 class="mt-3">Customer Suggestions</h3>
+                    {% for suggestion in suggestions %}
+                        <p>ID: {{ suggestion[0] }}, Flavor Name: {{ suggestion[1] }}, Description: {{ suggestion[2] }}, Allergen Concerns: {{ suggestion[3] }}</p>
+                    {% endfor %}
+                    <h4 class="mt-3">Add New Suggestion</h4>
+                    <form action="{{ url_for('add_suggestion') }}" method="POST">
+                        <div class="form-group">
+                            <label for="flavour_name">Flavor Name for Suggestion</label>
+                            <input type="text" class="form-control" id="flavour_name" name="flavour_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Suggestion Description</label>
+                            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="allergen_concerns">Allergen Concerns (optional)</label>
+                            <input type="text" class="form-control" id="allergen_concerns" name="allergen_concerns">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Suggestion</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
