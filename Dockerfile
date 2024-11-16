@@ -16,5 +16,8 @@ COPY . .
 # Expose the port that Streamlit runs on
 EXPOSE 8501
 
-# Command to run the Streamlit app
-CMD ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.host=0.0.0.0"]
+# Set the FLASK_APP environment variable
+ENV FLASK_APP=app.py
+
+# Command to run the Flask app
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8501"]
