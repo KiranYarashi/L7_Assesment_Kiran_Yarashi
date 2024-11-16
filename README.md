@@ -59,17 +59,17 @@ Steps to set up the application locally:
    ```sh
    pip install -r requirements.txt
    ```
-
-5. Run the application:
+5. Run the application :
+   ```sh
+   python app.py
+   ```
+6. Run the application using streamlit:
    ```sh
    cd app
    streamlit run streamlit_app.py
    ```
 
-6. Open the browser and navigate to:
-   ```sh
-   http://localhost:8502
-   ```
+
 ---
 ---
 
